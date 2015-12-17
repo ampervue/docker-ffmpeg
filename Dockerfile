@@ -225,7 +225,3 @@ RUN apt-get autoremove -y; apt-get clean -y
 # =======================================
 RUN mkdir /work
 WORKDIR /work
-
-RUN pip install -U numpy
-RUN pip install -U Pillow
-RUN pip install -U scipy
