@@ -45,10 +45,13 @@ RUN echo deb http://archive.ubuntu.com/ubuntu precise universe multiverse >> /et
     checkinstall \
     cmake \
     default-jdk \
+    f2c \
+    gfortran \
     git \
     g++ \
     imagemagick \
     libass-dev \
+    libatlas-base-dev \
     libavcodec-dev \
     libavformat-dev \
     libcnf-dev \
