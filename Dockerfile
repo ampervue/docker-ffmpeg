@@ -120,7 +120,6 @@ RUN git clone --depth 1 https://github.com/l-smash/l-smash \
     && git clone --depth 1 https://chromium.googlesource.com/webm/libvpx \
     && git clone --depth 1 git://git.opus-codec.org/opus.git \
     && git clone --depth 1 https://github.com/mulx/aacgain.git \
-    && git clone --depth 1 git://github.com/xianyi/OpenBLAS.git \
     && curl -Os http://www.tortall.net/projects/yasm/releases/yasm-${YASM_VERSION}.tar.gz \
     && tar xzvf yasm-${YASM_VERSION}.tar.gz
                   
@@ -224,3 +223,6 @@ RUN apt-get autoremove -y; apt-get clean -y
 RUN mkdir /work
 WORKDIR /work
 
+RUN pip install -U numpy
+RUN pip install -U Pillow
+RUN pip install -U scipy
