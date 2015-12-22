@@ -17,7 +17,7 @@ Source and example: https://github.com/ampervue/docker-ffmpeg
 docker pull dkarchmervue/ffmpeg
 docker run --rm -ti dkarchmervue/ffmpeg ffmpeg -version
 docker run --rm -ti -v ${PWD}:/work dkarchmervue/ffmpeg ffmpeg -i video.mp4 ...
-docker run --rm -ti -v ${PWD}:/work dkarchmervue/ffmpeg python your-moviepy-script.py
+docker run --rm -ti -v ${PWD}:/work dkarchmervue/ffmpeg python your-python-script.py
 docker run --rm -ti dkarchmervue/ffmpeg bash
 ~~~~
 
@@ -40,3 +40,7 @@ docker run --rm -ti -v ${PWD}:/code thumbnail --file http://techslides.com/demos
 ls thumbnail.jpg
 open thumbnail.jpg
 ~~~~
+
+## Python 2.7
+
+For Python 2.7, use https://github.com/ampervue/docker-python27-ffmpeg
