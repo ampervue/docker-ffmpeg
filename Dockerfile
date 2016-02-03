@@ -21,7 +21,7 @@ MAINTAINER David Karchmer <dkarchmer@ampervue.com>
 #####################################################################
 
 ENV PYTHON_VERSION 3.4.4
-ENV PYTHON_PIP_VERSION 7.1.2
+ENV PYTHON_PIP_VERSION 8.0.2
 ENV YASM_VERSION    1.3.0
 ENV NUM_CORES 4
 
