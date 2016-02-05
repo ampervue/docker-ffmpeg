@@ -1,5 +1,5 @@
 
-A Docker image running Ubuntu:trusty with latest Python 3.5 and latest FFMPEG (built from source)
+A Docker image running ampervue/python34 and latest FFMPEG (built from source)
 
 ### To Build
 
@@ -9,16 +9,16 @@ docker build -t <imageName> .
 
 ### To pull and run from hub.docker.com
 
-Docker Hub: https://registry.hub.docker.com/u/dkarchmervue/ffmpeg/
+Docker Hub: https://registry.hub.docker.com/u/ampervue/ffmpeg/
 
 Source and example: https://github.com/ampervue/docker-ffmpeg
 
 ~~~~
-docker pull dkarchmervue/ffmpeg
-docker run --rm -ti dkarchmervue/ffmpeg ffmpeg -version
-docker run --rm -ti -v ${PWD}:/work dkarchmervue/ffmpeg ffmpeg -i video.mp4 ...
-docker run --rm -ti -v ${PWD}:/work dkarchmervue/ffmpeg python your-python-script.py
-docker run --rm -ti dkarchmervue/ffmpeg bash
+docker pull ampervue/ffmpeg
+docker run --rm -ti ampervue/ffmpeg ffmpeg -version
+docker run --rm -ti -v ${PWD}:/work ampervue/ffmpeg ffmpeg -i video.mp4 ...
+docker run --rm -ti -v ${PWD}:/work ampervue/ffmpeg python your-python-script.py
+docker run --rm -ti ampervue/ffmpeg bash
 ~~~~
 
 ## Example
@@ -27,7 +27,7 @@ As an example, the python script uses FFMPEG to download a movie from the web an
 
 ~~~~
 # Pull image
-docker pull dkarchmervue/ffmpeg
+docker pull ampervue/ffmpeg
 
 # Get example files and build new image
 git clone https://github.com/ampervue/docker-ffmpeg
