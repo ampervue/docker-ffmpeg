@@ -56,7 +56,7 @@ RUN ./configure --enable-static \
 # Build libx265
 # =================================
 WORKDIR  /usr/local/src/x265/build/linux
-RUN cmake -DCMAKE_INSTALL_PREFIX:PATH=/usr ../../source \
+RUN cmake -DCMAKE_INSTALL_PREFIX:PATH=/usr -DENABLE_SHARED:bool=off ../../source \
     && make -j ${NUM_CORES} \
     && make install
 # =================================
@@ -91,6 +91,10 @@ RUN ./autogen.sh \
 # Build ffmpeg.
 # =================================
 
+# NOTE: Disableling libx265 for now
+#       as it no longer compiles
+#            --enable-libx265 \
+#
 WORKDIR /usr/local/src/ffmpeg
 RUN ./configure --extra-libs="-ldl" \
             --enable-gpl \
@@ -105,7 +109,6 @@ RUN ./configure --extra-libs="-ldl" \
             --enable-libvorbis \
             --enable-libvpx \
             --enable-libx264 \
-            --enable-libx265 \
             --enable-nonfree \
             --enable-openssl \
     && make -j ${NUM_CORES} \
